@@ -1,46 +1,118 @@
+/* ===============
+grobals
+=============== */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
-* ::-webkit-scrollbar {
-    display: none;
-}
 
+
+/* ===============
+header
+=============== */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
 }
 #banner-div {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 104px;
+    height: 100px;
     background: url(img/banner-DAIGEIKO.png) center no-repeat #152c78;
+    z-index: 11;
 }
-#menu-opener-div {
+#menu-button-div {
     padding: 0 16px 0 0;
 }
-#menu-opener-icon-div {
+#menu-button-div.menu-button-close {
+    /* Some Style */
+}
+#menu-button-icon-div {
     width: 42px;
     height: 43px;
     background: url(img/icon-menu.png) center no-repeat #152c78;
     cursor: pointer;
 }
 
+nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    background: #152c78;
+    width: 100%;
+    height: 60vh;
+    z-index: 10;
+}
+nav.menu-open {
+    display: block;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    color: #ffffff;
+    font-size: 32px;
+    list-style: none;
+}
+nav ul li {
+    cursor: pointer;
+    user-select: none;
+}
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+
+/* ===============
+main
+=============== */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #c5ffdc;
 }
-#spacer-div {
-    width: 100%;
-    height: 400px;
-    background-image: repeating-linear-gradient(45deg, #c5ffdc, #c5ffdc 5px, slateblue 6px, slateblue 7px);
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
+section h1 {
+    font-family: "Noto Sans JP";
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 37px;
+    text-align: center;
+    color: #152c78;
+}
+section p {
+    width: 285px;
+    margin: 50px 0;
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #152c78;
+}
+section img {
+    width: 100%;
+}
+
 #sns-div {
     display: flex;
     justify-content: space-around;
@@ -66,36 +138,6 @@ main {
     background-image: url(img/logo-Instagram.png);
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-h1 {
-    font-family: "Noto Sans JP";
-    font-size: 29px;
-    font-weight: 400;
-    line-height: 37px;
-    text-align: center;
-    color: #152c78;
-}
-p {
-    width: 285px;
-    margin: 50px 0;
-    font-family: "Noto Sans JP";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-    color: #152c78;
-}
-img {
-    width: 100%;
-}
-
-
 #supporters-content-div {
     display: flex;
     flex-direction: column;
@@ -114,4 +156,10 @@ img {
 }
 #meidoh-banner-div {
     background-image: url(img/banner-meidoh.png);
+}
+
+#spacer-div {
+    width: 100%;
+    height: 400px;
+    background-image: repeating-linear-gradient(45deg, #c5ffdc, #c5ffdc 5px, slateblue 6px, slateblue 7px);
 }
