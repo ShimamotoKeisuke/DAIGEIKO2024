@@ -11,6 +11,12 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+:root {
+    scroll-padding-top: 100px;
+    @media (min-width: 820px) {
+        scroll-padding-top: 140px;
+    }
+}
 
 /* ===============
 header
@@ -42,7 +48,7 @@ header {
 
         & + nav {
             display: block;
-            height: auto;
+            height: 40px;
             padding: 0.5rem 0;
 
             ul {
