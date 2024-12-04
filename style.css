@@ -14,7 +14,7 @@ body {
 :root {
     scroll-padding-top: 100px;
     @media (min-width: 820px) {
-        scroll-padding-top: 140px;
+        scroll-padding-top: calc(100px + 40px + 1rem);
     }
 }
 
