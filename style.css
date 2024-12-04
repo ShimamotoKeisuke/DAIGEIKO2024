@@ -29,6 +29,10 @@ header {
     flex-direction: column;
     align-items: center;
     position: sticky;
+    height: 100px;
+    @media (min-width: 820px) {
+        height: calc(100px + 40px + 1rem);
+    }
 }
 #banner-div {
     display: flex;
