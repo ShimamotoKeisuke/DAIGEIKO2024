@@ -9,6 +9,7 @@ function onWindowLoad() {
     // Resister events for menu
     const menuNav = document.getElementById("menu-nav");
     const menuButton = document.getElementById("menu-button-div");
+    const mainLogo = document.getElementById("daigeiko_logo")
 
     menuButton.onclick = () => {
         if (menuNav.classList.contains("menu-open")) {
@@ -19,6 +20,10 @@ function onWindowLoad() {
             menuButton.classList.add("menu-button-close");
         }
     };
+
+    mainLogo.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth"});
+    });
 
     const menuLis = document.getElementsByClassName("menu-li");
 

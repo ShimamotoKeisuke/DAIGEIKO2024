@@ -32,14 +32,23 @@ header {
 }
 #banner-div {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 100px;
-    background: url(img/banner-DAIGEIKO.png) center no-repeat #152c78;
+    background: #152c78;
     z-index: 11;
     top: 0;
-
+    #daigeiko_logo {
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        margin-left: 2rem;
+        height: 70%;
+        object {
+            pointer-events: none;
+        }
+    }
     @media (min-width: 820px) {
         background-position: left;
         & #menu-button-div {
@@ -59,12 +68,11 @@ header {
         }
     }
 }
+
 #menu-button-div {
     padding: 0 16px 0 0;
 }
-#menu-button-div.menu-button-close {
-    /* Some Style */
-}
+
 #menu-button-icon-div {
     width: 42px;
     height: 43px;
@@ -96,8 +104,8 @@ nav ul {
 }
 nav ul li {
     cursor: pointer;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 nav ul li:hover {
     text-decoration: underline;
@@ -107,10 +115,15 @@ nav ul li:hover {
 main
 =============== */
 main {
+    background: #c5ffdc;
+}
+#container {
+    padding: 0 1rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #c5ffdc;
+    max-width: 750px;
 }
 section {
     display: flex;
@@ -128,7 +141,8 @@ section h1 {
     color: #152c78;
 }
 section p {
-    width: 285px;
+    width: 70%;
+    min-width: 285px;
     margin: 50px 0;
     font-family: "Noto Sans JP";
     font-size: 14px;
