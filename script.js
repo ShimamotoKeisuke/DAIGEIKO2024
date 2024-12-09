@@ -29,6 +29,10 @@ function onWindowLoad() {
 
     mainLogo.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+
+        menuNav.classList.remove("menu-open");
+        menuButton.classList.remove("menu-button-close");
+        cover.classList.remove("menu-button-close");
     });
 
     const menuLis = document.getElementsByClassName("menu-li");
