@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DAIGEIKO 2024</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -14,13 +14,28 @@
       rel="stylesheet" />
   </head>
   <body>
+    <div id="cover"></div>
     <header>
       <div id="banner-div">
         <div id="daigeiko_logo">
           <object data="./img/logo_DAIGEIKO_white.svg" height="100%"></object>
         </div>
         <div id="menu-button-div">
-          <div id="menu-button-icon-div"></div>
+          <!-- <div id="menu-button-icon-div"></div> -->
+          <svg id="menu-button-icon-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 25">
+            <defs>
+              <style>
+                rect {
+                  fill: #fff;
+                }
+              </style>
+            </defs>
+            <g>
+              <rect id="hamburger-top" y="01" width="30" height="3" />
+              <rect id="hamburger-middle" y="11" width="30" height="3" />
+              <rect id="hamburger-bottom" y="21" width="30" height="3" />
+            </g>
+          </svg>
         </div>
       </div>
       <nav id="menu-nav">
