@@ -9,20 +9,26 @@ function onWindowLoad() {
     // Resister events for menu
     const menuNav = document.getElementById("menu-nav");
     const menuButton = document.getElementById("menu-button-div");
-    const mainLogo = document.getElementById("daigeiko_logo")
+    const mainLogo = document.getElementById("daigeiko_logo");
+    const cover = document.getElementById("cover");
 
-    menuButton.onclick = () => {
+    const menuCloser = () => {
         if (menuNav.classList.contains("menu-open")) {
             menuNav.classList.remove("menu-open");
             menuButton.classList.remove("menu-button-close");
+            cover.classList.remove("menu-button-close");
         } else {
             menuNav.classList.add("menu-open");
             menuButton.classList.add("menu-button-close");
+            cover.classList.add("menu-button-close");
         }
     };
 
+    menuButton.addEventListener("click", menuCloser);
+    cover.addEventListener("click", menuCloser);
+
     mainLogo.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth"});
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     const menuLis = document.getElementsByClassName("menu-li");
@@ -34,6 +40,7 @@ function onWindowLoad() {
 
             menuNav.classList.remove("menu-open");
             menuButton.classList.remove("menu-button-close");
+            cover.classList.remove("menu-button-close");
         };
     }
 }
