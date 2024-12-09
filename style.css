@@ -63,6 +63,7 @@ header {
             display: block;
             height: 40px;
             padding: 0.5rem 0;
+            visibility: visible;
 
             ul {
                 flex-direction: row;
@@ -77,26 +78,55 @@ header {
     padding: 0 16px 0 0;
 }
 
-#menu-button-icon-div {
+/* #menu-button-icon-div {
     width: 42px;
     height: 43px;
     background: url(img/icon-menu.png) center no-repeat #152c78;
     cursor: pointer;
+} */
+
+#menu-button-icon-svg {
+    width: 2rem;
+    cursor: pointer;
+    & * {
+        transition: 0.5s;
+    }
+}
+
+.menu-button-close #menu-button-icon-svg {
+    #hamburger-top {
+        transform-origin: center;
+        transform: translateX(calc(10px * sin(-45deg)))
+            translateY(calc(10px * cos(-45deg))) rotate(45deg);
+    }
+    #hamburger-middle {
+        width: 0;
+    }
+    #hamburger-bottom {
+        transform-origin: center;
+        transform: translateX(calc(-10px * sin(45deg)))
+            translateY(calc(-10px * cos(45deg))) rotate(-45deg);
+    }
 }
 
 nav {
-    display: none;
+    visibility: hidden;
     position: absolute;
     top: 100px;
     background: #152c78;
     width: 100%;
-    height: 60vh;
+    height: 0;
     z-index: 10;
+    transition: 0.5s;
+    display: block;
+    overflow: hidden;
 }
 nav.menu-open {
-    display: block;
+    height: 60vh;
+    visibility: visible;
 }
 nav ul {
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
