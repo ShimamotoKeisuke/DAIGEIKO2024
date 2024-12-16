@@ -1,5 +1,5 @@
 /* ===============
-grobals
+globals
 =============== */
 
 ::-webkit-scrollbar {
@@ -14,7 +14,7 @@ body {
 :root {
     scroll-padding-top: 100px;
     @media (min-width: 820px) {
-        scroll-padding-top: 140px;
+        scroll-padding-top: calc(100px + 40px + 1rem);
     }
 }
 
@@ -29,17 +29,30 @@ header {
     flex-direction: column;
     align-items: center;
     position: sticky;
+    height: 100px;
+    @media (min-width: 820px) {
+        height: calc(100px + 40px + 1rem);
+    }
 }
 #banner-div {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 100px;
-    background: url(img/banner-DAIGEIKO.png) center no-repeat #152c78;
+    background: #152c78;
     z-index: 11;
     top: 0;
-
+    #daigeiko_logo {
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        margin-left: 2rem;
+        height: 70%;
+        object {
+            pointer-events: none;
+        }
+    }
     @media (min-width: 820px) {
         background-position: left;
         & #menu-button-div {
@@ -50,6 +63,7 @@ header {
             display: block;
             height: 40px;
             padding: 0.5rem 0;
+            visibility: visible;
 
             ul {
                 flex-direction: row;
@@ -59,32 +73,77 @@ header {
         }
     }
 }
+
 #menu-button-div {
     padding: 0 16px 0 0;
 }
-#menu-button-div.menu-button-close {
-    /* Some Style */
-}
-#menu-button-icon-div {
+
+/* #menu-button-icon-div {
     width: 42px;
     height: 43px;
     background: url(img/icon-menu.png) center no-repeat #152c78;
     cursor: pointer;
+} */
+
+#menu-button-icon-svg {
+    width: 2rem;
+    cursor: pointer;
+    & * {
+        transition: 0.5s;
+    }
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    visibility: collapse;
+    transition: 0.5s;
+    &.menu-button-close {
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
+    @media (min-width: 820px) {
+        display: none;
+    }
+}
+
+.menu-button-close #menu-button-icon-svg {
+    #hamburger-top {
+        transform-origin: center;
+        transform: translateX(calc(10px * sin(-45deg)))
+            translateY(calc(10px * cos(-45deg))) rotate(45deg);
+    }
+    #hamburger-middle {
+        width: 0;
+    }
+    #hamburger-bottom {
+        transform-origin: center;
+        transform: translateX(calc(-10px * sin(45deg)))
+            translateY(calc(-10px * cos(45deg))) rotate(-45deg);
+    }
 }
 
 nav {
-    display: none;
+    visibility: hidden;
     position: absolute;
     top: 100px;
     background: #152c78;
     width: 100%;
-    height: 60vh;
+    height: 0;
     z-index: 10;
+    transition: 0.5s;
+    display: block;
+    overflow: hidden;
 }
 nav.menu-open {
-    display: block;
+    height: 60vh;
+    visibility: visible;
 }
 nav ul {
+    padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -96,8 +155,8 @@ nav ul {
 }
 nav ul li {
     cursor: pointer;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 nav ul li:hover {
     text-decoration: underline;
@@ -107,10 +166,15 @@ nav ul li:hover {
 main
 =============== */
 main {
+    background: #c5ffdc;
+}
+#container {
+    padding: 0 1rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #c5ffdc;
+    max-width: 750px;
 }
 section {
     display: flex;
@@ -121,25 +185,65 @@ section {
 }
 section h1 {
     font-family: "Noto Sans JP";
-    font-size: 29px;
+    font-size: 32px;
     font-weight: 400;
     line-height: 37px;
     text-align: center;
     color: #152c78;
 }
 section p {
-    width: 285px;
+    width: 70%;
+    min-width: 285px;
     margin: 50px 0;
     font-family: "Noto Sans JP";
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 32px;
     text-align: left;
     color: #152c78;
 }
 section img {
     width: 100%;
 }
+
+
+#works-list-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.works-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 20px;
+    font-family: "Noto Sans JP";
+    line-height: 32px;
+    color: #152c78;
+    scroll-snap-align: center;
+    flex: none;
+}
+
+.works-item img {
+    max-height: 40vh;
+}
+
+.works-item h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.works-item h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
 
 #sns-div {
     display: flex;
@@ -151,7 +255,18 @@ section img {
     position: sticky;
     bottom: 0;
     left: 0;
+    & > div {
+        margin: 16px;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        & > object {
+            pointer-events: none;
+        }
+    }
+
     @media (min-width: 820px) {
+        border-radius: 1rem;
         width: auto;
         position: fixed;
         flex-direction: column;
@@ -159,15 +274,9 @@ section img {
         right: 10px;
         bottom: 10px;
         padding: 0.1rem;
-        gap: 0.5rem;
-        & > div {
-            padding: 0.2rem;
-            width: 2rem;
-            height: 2rem;
-            background-origin: content-box;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+        height: unset;
+        @media (max-height: 400px) {
+            flex-direction: row;
         }
     }
 }
@@ -177,15 +286,6 @@ section img {
     cursor: pointer;
     background-position: center;
     background-repeat: no-repeat;
-}
-#x-logo-div {
-    background-image: url(img/logo-X.png);
-}
-#facebook-logo-div {
-    background-image: url(img/logo-Facebook.png);
-}
-#instagram-logo-div {
-    background-image: url(img/logo-Instagram.png);
 }
 
 #supporters-content-div {
