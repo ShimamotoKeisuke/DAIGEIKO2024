@@ -4,24 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DAIGEIKO 2024</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap"
-      rel="stylesheet" />
   </head>
   <body>
     <div id="cover"></div>
     <header>
       <div id="banner-div">
         <div id="daigeiko_logo">
-          <object data="./img/logo_DAIGEIKO_white.svg" height="100%"></object>
+          <object data="./img/logos/logo_DAIGEIKO_white.svg" height="100%"></object>
         </div>
         <div id="menu-button-div">
-          <!-- <div id="menu-button-icon-div"></div> -->
           <svg id="menu-button-icon-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 30 25">
             <defs>
               <style>
@@ -42,9 +38,9 @@
         <ul>
           <li class="menu-li" data-section-id="works-section">作品一覧</li>
           <li class="menu-li" data-section-id="about-section">大芸工展について</li>
-          <li class="menu-li" data-section-id="judges-section">審査員紹介</li>
+          <!-- <li class="menu-li" data-section-id="judges-section">審査員紹介</li> -->
           <li class="menu-li" data-section-id="message-section">代表あいさつ</li>
-          <li class="menu-li" data-section-id="supporters-section">ご支援者の皆さま</li>
+          <!-- <li class="menu-li" data-section-id="supporters-section">ご支援者の皆さま</li> -->
           <li class="menu-li" data-section-id="contact-section">お問い合わせ</li>
         </ul>
       </nav>
@@ -55,19 +51,43 @@
           <h1>作品一覧</h1>
           <div id="works-list-div">
             <div class="works-item">
-              <img src="img/sample-image.png" alt="sample image" />
-              <h2>sample title 1</h2>
-              <h3>sample name</h3>
+              <img src="img/works/works_4_Honoka-min.png" alt="Honoka" loading="eager" />
+              <h2>Honoka</h2>
+              <h3>高田真佑, 近藤心良</h3>
+              <h3>名古屋市立大学</h3>
+            </div>  
+            <div class="works-item">
+              <img src="img/works/works_5_ChocolateBIR-min.png" alt="ChocolateBIR" loading="eager" />
+              <h2>Chocolate BIR</h2>
+              <h3>橋本啓子</h3>
+              <h3>名古屋市立大学</h3>
             </div>
             <div class="works-item">
-              <img src="img/sample-image.png" alt="sample image" />
-              <h2>sample title 2</h2>
-              <h3>sample name</h3>
+              <img src="img/works/works_1_Flame-min.jpg" alt="Flame" loading="eager" />
+              <h2>Flame</h2>
+              <h3>林 菜摘</h3>
+              <h3>神戸芸術工科大学</h3>
             </div>
             <div class="works-item">
-              <img src="img/sample-image.png" alt="sample image" />
-              <h2>sample title 3</h2>
-              <h3>sample name</h3>
+              <img src="img/works/works_2_GAMUTAPE-min.png" alt="GAMUTAPE" loading="eager" />
+              <h2>我武テープ</h2>
+              <h3>斎藤翔太, 堀内凌太朗</h3>
+              <h3>名古屋市立大学</h3>
+            </div>
+            <div class="works-item">
+              <img src="img/works/works_3_2W-min.JPG" alt="2W" loading="eager" />
+              <h2>2W</h2>
+              <h3>松田陽菜多</h3>
+              <h3>神戸芸術工科大学</h3>
+            </div>
+            <div class="works-item">
+              <img src="img/works/works_6_SAKURASAKUMADE-min.jpg" alt="SAKURASAKUMADE" loading="eager" />
+              <h2>サクラサクマデ</h2>
+              <h3>伊藤萌衣, 小澤茉穂, 河合水緒</h3>
+              <h3>名古屋市立大学</h3>
+            </div>
+            <div class="works-item">
+              <h1 id="AndMore-h1">And More!</h1>
             </div>
           </div>
         </section>
@@ -82,24 +102,29 @@
           </p>
         </section>
         <section id="judges-section">
+          <!--
           <h1>審査員紹介</h1>
           <img src="img/sample-image.png" alt="sample image" />
           <p>
             Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-            Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-            Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
           </p>
+          -->
         </section>
         <section id="message-section">
           <h1>代表あいさつ</h1>
           <p>
-            Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-            Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-            Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-          </p>
-          <img src="img/sample-image.png" alt="sample image" />
+            「大芸工展2024」にご興味いただき、誠にありがとうございます。
+            本展は、多くの才能が集う芸術と工学の学び舎から生まれる、芸術工学を社会に向けて発信する場として企画されました。学生たちの挑戦と探求の結晶を通じて、芸術と技術が交差する新たな価値や可能性を皆さまと共有できれば幸いです。
+            また、この場が学生や関係者、来場者の皆さまが出会い、交流し、次なる未来を切り開くきっかけとなることを願っております。
+            最後に、このイベントの開催にあたりご協力いただきました全ての方々に心より感謝申し上げます。どうぞ最後まで「大芸工展2024」を存分にお楽しみください。
+            <br>
+            <br>
+            <span style="float: right;">
+              大芸工展2024運営代表 末永 千絢  
+            </span>
+            </p>
         </section>
-        <section id="supporters-section">
+        <!-- <section id="supporters-section">
           <h1>ご支援者の皆さま</h1>
           <p>
             この度大芸工展2024を開催するにあたり、たくさんの方にご協力をいただきました。
@@ -108,22 +133,22 @@
           <div id="supporters-content-div">
             <div id="meidoh-banner-div" class="supporters-banner-div"></div>
           </div>
-        </section>
+        </section> -->
         <section id="contact-section">
           <h1>お問い合わせ</h1>
-          <p>someone@mail.com</p>
+          <p style="text-align: center;">daigeikou2024@gmail.com</p>
         </section>
       </div>
     </main>
     <div id="sns-div">
       <div data-url="https://x.com/daigeikouten">
-        <object data="./img/icons/x.svg" width="32" height="32"></object>
+        <object data="./img/logos/x.svg" width="32" height="32"></object>
       </div>
       <div data-url="https://www.facebook.com/daigeikoten/">
-        <object data="./img/icons/facebook.svg" width="32" height="32"></object>
+        <object data="./img/logos/facebook.svg" width="32" height="32"></object>
       </div>
       <div data-url="https://www.instagram.com/daigeikouten_2024">
-        <object data="./img/icons/instagram.svg" width="32" height="32"></object>
+        <object data="./img/logos/instagram.svg" width="32" height="32"></object>
       </div>
     </div>
     <script src="script.js"></script>

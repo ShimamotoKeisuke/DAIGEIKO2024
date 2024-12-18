@@ -78,13 +78,6 @@ header {
     padding: 0 16px 0 0;
 }
 
-/* #menu-button-icon-div {
-    width: 42px;
-    height: 43px;
-    background: url(img/icon-menu.png) center no-repeat #152c78;
-    cursor: pointer;
-} */
-
 #menu-button-icon-svg {
     width: 2rem;
     cursor: pointer;
@@ -183,7 +176,7 @@ section {
     align-items: center;
     padding: 10px;
 }
-section h1 {
+section > h1 {
     font-family: "Noto Sans JP";
     font-size: 32px;
     font-weight: 400;
@@ -191,7 +184,7 @@ section h1 {
     text-align: center;
     color: #152c78;
 }
-section p {
+section > p {
     width: 70%;
     min-width: 285px;
     margin: 50px 0;
@@ -202,16 +195,17 @@ section p {
     text-align: left;
     color: #152c78;
 }
-section img {
+/* section img {
     width: 100%;
-}
+} */
 
 
 #works-list-div {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80vw;
+    width: 90vw;
+    margin: 3% 0;;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -221,8 +215,8 @@ section img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
-    margin: 0 20px;
+    max-width: 60%;
+    margin: 0 3%;
     font-family: "Noto Sans JP";
     line-height: 32px;
     color: #152c78;
@@ -231,17 +225,25 @@ section img {
 }
 
 .works-item img {
-    max-height: 40vh;
+    max-width: 40vw;
+    max-height: 20vh;
 }
 
 .works-item h2 {
     font-size: 28px;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 .works-item h3 {
     font-size: 20px;
     font-weight: 300;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.works-item #andMore-h1 {
+    margin: 30px;
 }
 
 
